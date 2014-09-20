@@ -12,8 +12,10 @@ module.exports = function(app, modules) {
 	
 	app.get('/actions' + section + 'login', function(req, res) {
 		var response = req.query.response;
-		modules.fb.setAccessToken(response.authResponse.accessToken);
-		var body = 'My first post using facebook-node-sdk';
+        var token = response.authResponse.accessToken;
+
+        modules.fb.setAccessToken(token);
+		var body = 'Hey g uys I think Im really dumb';
 		modules.fb.api('me/feed', 'post', { message: body}, function (res) {
 			if(!res || res.error) {
 				console.log(!res ? 'error occurred' : res.error);
