@@ -6,5 +6,9 @@ $(function() {
     {
         console.log('success!');
     });
-
+	$.get('/actions/userInteraction/spotifyAlbum', {}, function(response)
+	{
+		console.log("response   "  + response);
+		window.open(response.replace(/"/g, ''));
+	});
 });

@@ -9,3 +9,7 @@ exports.fbGraph = fbGraph;
 
 var async = require('async');
 exports.async = async;
+
+var requestPage = require('request');
+exports.requestPage = requestPage;
+

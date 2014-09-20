@@ -34,4 +34,13 @@ module.exports = function(app, modules) {
             }
         ], function() {});
     });
+	
+	app.get('/actions' + section + 'spotifyAlbum', function(req, res) {
+		modules.requestPage("http://tinysong.com/a/Girl+Talk+Ask+About+Me?format=json&key=45dbb061f69c29a8ea36d499f1260d3d", function (error, response, body) {
+		  if (!error && response.statusCode == 200) {
+			console.log("going to" + body) // Print the google web page.
+			res.send(body);
+		  }
+		});
+	});
 }
