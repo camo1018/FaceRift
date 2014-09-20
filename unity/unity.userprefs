@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NetworkManager.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\testUnity\MultiFPS - ep 6\Assets\NetworkCharacter.cs">
     <Files>
-      <File FileName="Assets\Scripts\NetworkManager.cs" Line="21" Column="74" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\OVR\Scripts\OVRPlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\OVR\Scripts\OVRGamepadController.cs" Line="1" Column="1" />
+      <File FileName="..\..\testUnity\MultiFPS - ep 6\Assets\_IMPORTED\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs" Line="1951" Column="69" />
+      <File FileName="..\..\testUnity\MultiFPS - ep 6\Assets\NetworkManager.cs" Line="21" Column="3" />
+      <File FileName="..\..\testUnity\MultiFPS - ep 6\Assets\NetworkCharacter.cs" Line="1" Column="1" />
+      <File FileName="..\..\testUnity\MultiFPS - ep 6\Assets\SpawnSpot.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

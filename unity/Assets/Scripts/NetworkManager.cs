@@ -1,85 +1,45 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-/**
- * Most credit goes to http://www.paladinstudios.com/2013/07/10/how-to-create-an-online-multiplayer-game-with-unity/
- **/
 
-public class NetworkManager : MonoBehaviour
-{
-    private const string typeName = "UniqueGameName";
-    private const string gameName = "Friffles";
+public class NetworkManager : MonoBehaviour {
 
-    private bool isRefreshingHostList = false;
-    private HostData[] hostList;
+	public GameObject standbyCamera;
 
-    public GameObject playerPrefab;
+	// Use this for initialization
+	void Start () {
+		Connect ();
+	}
 
-    void OnGUI()
-    {
-        if (!Network.isClient && !Network.isServer)
-        {
-            if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
-                StartServer();
+	void Connect() {
+		PhotonNetwork.ConnectUsingSettings( "Frift v001" );
+	}
+	 
+	void OnGUI() {
+		GUILayout.Label( PhotonNetwork.connectionStateDetailed.ToString() );
+	}
 
-            if (GUI.Button(new Rect(100, 250, 250, 100), "Refresh Hosts"))
-                RefreshHostList();
+	void OnJoinedLobby() {
+		Debug.Log ("OnJoinedLobby");
+		PhotonNetwork.JoinRandomRoom();
+	}
 
-            if (hostList != null)
-            {
-                for (int i = 0; i < hostList.Length; i++)
-                {
-                    if (GUI.Button(new Rect(400, 100 + (110 * i), 300, 100), hostList[i].gameName))
-                        JoinServer(hostList[i]);
-                }
-            }
-        }
-    }
+	void OnPhotonRandomJoinFailed() {
+		Debug.Log ("OnPhotonRandomJoinFailed");
+		PhotonNetwork.CreateRoom( null );
+	}
 
-    private void StartServer()
-    {
-        Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
-		//MasterServer.ipAddress = "127.0.0.1";
-        MasterServer.RegisterHost(typeName, gameName);
-    }
+	void OnJoinedRoom() {
+		Debug.Log ("OnJoinedRoom");
 
-    void OnServerInitialized()
-    {
-        SpawnPlayer();
-    }
+		SpawnMyPlayer();
+	}
 
-
-    void Update()
-    {
-        if (isRefreshingHostList && MasterServer.PollHostList().Length > 0)
-        {
-            isRefreshingHostList = false;
-            hostList = MasterServer.PollHostList();
-        }
-    }
-
-    private void RefreshHostList()
-    {
-        if (!isRefreshingHostList)
-        {
-            isRefreshingHostList = true;
-            MasterServer.RequestHostList(typeName);
-        }
-    }
-
-
-    private void JoinServer(HostData hostData)
-    {
-        Network.Connect(hostData);
-    }
-
-    void OnConnectedToServer()
-    {
-        SpawnPlayer();
-    }
-
-
-    private void SpawnPlayer()
-    {
-        Network.Instantiate(playerPrefab, Vector3.up * 5, Quaternion.identity, 0);
-    }
+	void SpawnMyPlayer() {
+		float x = 0.0f;//Random.Range (-10.0f, 10.0f);
+		float y = 2.0f;//Random.Range (-10.0f, 10.0f);
+		float z = 0.0f;//Random.Range (-10.0f, 10.0f);
+		GameObject myPlayerGO = (GameObject)PhotonNetwork.Instantiate("OVRPlayerController", new Vector3(x, y, z), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f), 0);
+		standbyCamera.SetActive(false);
+		myPlayerGO.transform.FindChild("OVRCameraController").gameObject.SetActive(true);
+	}
 }

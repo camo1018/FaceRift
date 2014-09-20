@@ -115,19 +115,11 @@ public class OVRPlayerController : MonoBehaviour
 	// For rachet rotation using d-pad
 	private bool prevHatLeft 			  = false;
 	private bool prevHatRight 			  = false;
-
-	private float lastSynchronizationTime = 0f;
-	private float syncDelay = 0f;
-	private float syncTime = 0f;
-	private Vector3 syncStartPosition = Vector3.zero;
-	private Vector3 syncEndPosition = Vector3.zero;
 	#endregion
 
 	#region MonoBehaviour Message Handlers
 	void Awake()
 	{		
-		lastSynchronizationTime = Time.time;
-
 		// We use Controller to move player around
 		Controller = gameObject.GetComponent<CharacterController>();
 		
@@ -165,32 +157,6 @@ public class OVRPlayerController : MonoBehaviour
 			Debug.LogWarning("OVRPlayerController: ForwardDirection game object not found. Do not use.");
 	}
 
-	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
-	{
-		Vector3 syncPosition = Vector3.zero;
-		Vector3 syncVelocity = Vector3.zero;
-		if (stream.isWriting)
-		{
-			syncPosition = rigidbody.position;
-			stream.Serialize(ref syncPosition);
-			
-			syncPosition = rigidbody.velocity;
-			stream.Serialize(ref syncVelocity);
-		}
-		else
-		{
-			stream.Serialize(ref syncPosition);
-			stream.Serialize(ref syncVelocity);
-			
-			syncTime = 0f;
-			syncDelay = Time.time - lastSynchronizationTime;
-			lastSynchronizationTime = Time.time;
-			
-			syncEndPosition = syncPosition + syncVelocity * syncDelay;
-			syncStartPosition = rigidbody.position;
-		}
-	}
-
 	protected virtual void Start()
 	{
 		InitializeInputs();	
@@ -199,57 +165,49 @@ public class OVRPlayerController : MonoBehaviour
 		
 	protected virtual void Update()
 	{
-		if (networkView.isMine)
-		{
-			UpdateMovement();
+		UpdateMovement();
 
-			Vector3 moveDirection = Vector3.zero;
-			
-			float motorDamp = (1.0f + (Damping * OVRDevice.SimulationRate * Time.deltaTime));
-			MoveThrottle.x /= motorDamp;
-			MoveThrottle.y = (MoveThrottle.y > 0.0f) ? (MoveThrottle.y / motorDamp) : MoveThrottle.y;
-			MoveThrottle.z /= motorDamp;
+		Vector3 moveDirection = Vector3.zero;
+		
+		float motorDamp = (1.0f + (Damping * OVRDevice.SimulationRate * Time.deltaTime));
+		MoveThrottle.x /= motorDamp;
+		MoveThrottle.y = (MoveThrottle.y > 0.0f) ? (MoveThrottle.y / motorDamp) : MoveThrottle.y;
+		MoveThrottle.z /= motorDamp;
 
-			moveDirection += MoveThrottle * OVRDevice.SimulationRate * Time.deltaTime;
-			
-			// Gravity
-			if (Controller.isGrounded && FallSpeed <= 0)
-				FallSpeed = ((Physics.gravity.y * (GravityModifier * 0.002f)));	
-			else
-				FallSpeed += ((Physics.gravity.y * (GravityModifier * 0.002f)) * OVRDevice.SimulationRate * Time.deltaTime);	
-
-			moveDirection.y += FallSpeed * OVRDevice.SimulationRate * Time.deltaTime;
-
-			// Offset correction for uneven ground
-			float bumpUpOffset = 0.0f;
-			
-			if (Controller.isGrounded && MoveThrottle.y <= 0.001f)
-			{
-				bumpUpOffset = Mathf.Max(Controller.stepOffset, 
-										 new Vector3(moveDirection.x, 0, moveDirection.z).magnitude); 
-				moveDirection -= bumpUpOffset * Vector3.up;
-			}			
-		 
-			Vector3 predictedXZ = Vector3.Scale((Controller.transform.localPosition + moveDirection), 
-												 new Vector3(1, 0, 1));	
-			
-			// Move contoller
-			Controller.Move(moveDirection);
-			
-			Vector3 actualXZ = Vector3.Scale(Controller.transform.localPosition, new Vector3(1, 0, 1));
-			
-			if (predictedXZ != actualXZ)
-				MoveThrottle += (actualXZ - predictedXZ) / (OVRDevice.SimulationRate * Time.deltaTime);
-			
-			// Update rotation using CameraController transform, possibly proving some rules for 
-			// sliding the rotation for a more natural movement and body visual
-			UpdatePlayerForwardDirTransform();
-		}
+		moveDirection += MoveThrottle * OVRDevice.SimulationRate * Time.deltaTime;
+		
+		// Gravity
+		if (Controller.isGrounded && FallSpeed <= 0)
+			FallSpeed = ((Physics.gravity.y * (GravityModifier * 0.002f)));	
 		else
-		{
-			SyncedMovement();
-		}
+			FallSpeed += ((Physics.gravity.y * (GravityModifier * 0.002f)) * OVRDevice.SimulationRate * Time.deltaTime);	
 
+		moveDirection.y += FallSpeed * OVRDevice.SimulationRate * Time.deltaTime;
+
+		// Offset correction for uneven ground
+		float bumpUpOffset = 0.0f;
+		
+		if (Controller.isGrounded && MoveThrottle.y <= 0.001f)
+		{
+			bumpUpOffset = Mathf.Max(Controller.stepOffset, 
+									 new Vector3(moveDirection.x, 0, moveDirection.z).magnitude); 
+			moveDirection -= bumpUpOffset * Vector3.up;
+		}			
+	 
+		Vector3 predictedXZ = Vector3.Scale((Controller.transform.localPosition + moveDirection), 
+											 new Vector3(1, 0, 1));	
+		
+		// Move contoller
+		Controller.Move(moveDirection);
+		
+		Vector3 actualXZ = Vector3.Scale(Controller.transform.localPosition, new Vector3(1, 0, 1));
+		
+		if (predictedXZ != actualXZ)
+			MoveThrottle += (actualXZ - predictedXZ) / (OVRDevice.SimulationRate * Time.deltaTime);
+		
+		// Update rotation using CameraController transform, possibly proving some rules for 
+		// sliding the rotation for a more natural movement and body visual
+		UpdatePlayerForwardDirTransform();
 	}
 	#endregion
 
@@ -552,13 +510,6 @@ public class OVRPlayerController : MonoBehaviour
 	public void SetHaltUpdateMovement(bool haltUpdateMovement)
 	{
 		HaltUpdateMovement = haltUpdateMovement;
-	}
-
-	private void SyncedMovement()
-	{
-		syncTime += Time.deltaTime;
-		
-		transform.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
 	}
 	#endregion
 }
