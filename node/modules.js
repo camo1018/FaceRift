@@ -4,5 +4,5 @@
 var fb = require('fb');
 exports.fb = fb;
 
-var fbgraph = require('fbgraph');
-exports.fbGraph = fb-graph;
+var fbGraph = require('fbgraph');
+exports.fbGraph = fbGraph;
