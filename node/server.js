@@ -25,6 +25,6 @@ app.get('/', function(req, res) {
 // Controllers
 require('./controllers/login.js')(app, modules);
 
-console.log('Server started at port 8000');
+console.log('Server started at port 7000');
 
-app.listen(8000);
+app.listen(7000);
