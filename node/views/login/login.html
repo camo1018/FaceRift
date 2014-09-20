@@ -82,7 +82,7 @@
     function login(response) {
 		var params = { response: response };
         $.get('/actions/login/login', params, function(res) {
-			
+			window.location = '/login/launch';
 		});
     };
 </script>
@@ -93,8 +93,12 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
-</fb:login-button>
+<div class="login-wrapper">
+    <h3>Login to your Facebook Account!</h3>
+    <fb:login-button scope="public_profile,email,publish_actions" onlogin="checkLoginState();">
+    </fb:login-button>
+</div>
+
 
 <div id="status">
 </div>

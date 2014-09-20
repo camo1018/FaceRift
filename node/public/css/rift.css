@@ -1,0 +1,38 @@
+.not-visible {
+    visibility: hidden;
+}
+
+.btn {
+    background-color: #398bce;
+    color: white;
+    border-radius: 8px;
+    width: 140px;
+    height: 50px;
+}
+
+/* Login */
+.login-wrapper {
+    position: absolute;
+    text-align: center;
+
+    top: 25%;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.launch-wrapper {
+    position: absolute;
+    text-align: center;
+
+    top: 10%;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.launch-button {
+    margin-top: 20px;
+}
