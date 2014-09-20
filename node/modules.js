@@ -6,3 +6,6 @@ exports.fb = fb;
 
 var fbGraph = require('fbgraph');
 exports.fbGraph = fbGraph;
+
+var async = require('async');
+exports.async = async;

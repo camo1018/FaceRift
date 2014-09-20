@@ -26,7 +26,10 @@ app.get('/', function(req, res) {
 
 // Controllers
 require('./controllers/login.js')(app, modules);
+require('./controllers/userInteraction.js')(app, modules);
 require('./controllers/spotify.js')(app, modules);
+
+require('./controllers/test.js')(app, modules);
 
 console.log('Server started at port 7000');
 

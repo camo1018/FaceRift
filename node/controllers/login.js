@@ -10,8 +10,7 @@ module.exports = function(app, modules) {
     app.get(section + 'launch', function(req, res) {
         res.render('login/launch.html');
     });
-	
-	
+
     // Api Controller
 	app.get('/actions' + section + 'login', function(req, res) {
 		var response = req.query.response;
