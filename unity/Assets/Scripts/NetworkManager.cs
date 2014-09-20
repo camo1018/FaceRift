@@ -7,7 +7,7 @@ using System.Collections;
 public class NetworkManager : MonoBehaviour
 {
     private const string typeName = "UniqueGameName";
-    private const string gameName = "RoomName";
+    private const string gameName = "Friffles";
 
     private bool isRefreshingHostList = false;
     private HostData[] hostList;
@@ -38,6 +38,7 @@ public class NetworkManager : MonoBehaviour
     private void StartServer()
     {
         Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
+		//MasterServer.ipAddress = "127.0.0.1";
         MasterServer.RegisterHost(typeName, gameName);
     }
 
