@@ -38,4 +38,4 @@ Thumbs.db
 
 # WebStorm files #
 ##################
-.idea/*
+node/.idea/*
