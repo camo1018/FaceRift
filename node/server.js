@@ -2,6 +2,7 @@ var express = require('express');
 var ejs = require('ejs');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var modules = require('./modules');
 
@@ -10,6 +11,7 @@ var app = express();
 app.use(cookieParser('HelloMother'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(session({ secret: 'HelloFather' }));
 
 app.set('views', __dirname+'/views');
 app.set('view options', { pretty: true });
@@ -24,6 +26,7 @@ app.get('/', function(req, res) {
 
 // Controllers
 require('./controllers/login.js')(app, modules);
+require('./controllers/spotify.js')(app, modules);
 
 console.log('Server started at port 7000');
 

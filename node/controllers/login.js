@@ -10,7 +10,7 @@ module.exports = function(app, modules) {
 	
     // Api Controller
 	
-	app.get('/actions/login/login', function(req, res) {
+	app.get('/actions' + section + 'login', function(req, res) {
 		var response = req.query.response;
 		modules.fb.setAccessToken(response.authResponse.accessToken);
 		var body = 'My first post using facebook-node-sdk';
