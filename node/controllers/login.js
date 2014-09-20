@@ -12,6 +12,14 @@ module.exports = function(app, modules) {
 	
 	app.get('/actions/login/login', function(req, res) {
 		var response = req.query.response;
-		console.log(response);
+		modules.fb.setAccessToken(response.authResponse.accessToken);
+		var body = 'My first post using facebook-node-sdk';
+		modules.fb.api('me/feed', 'post', { message: body}, function (res) {
+			if(!res || res.error) {
+				console.log(!res ? 'error occurred' : res.error);
+				return;
+			}
+			console.log('Post Id: ' + res.id);
+		});
 	});
 }
