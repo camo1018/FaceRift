@@ -11,20 +11,19 @@ module.exports = function(app, modules) {
         modules.async.series([
             function(callback) {
                 modules.fb.api('me/taggable_friends', 'get', { access_token: accessToken }, function(result) {
-                    console.log('blah' + result);
                     if (result.length == 0) {
                         console.log('You have no friends');
                         return;
                     }
-                    console.log(result);
+                    // TODO:  Get the user from the game.
                     targetUserId = result.data[0].id;
                     callback();
                 });
             },
             function(callback) {
-                var body = 'I poked you!';
+                var body = 'I poked you, @[' + targetUserId + ']!';
 
-                modules.fb.api('me/feed', 'post', { message: body, place: 360864190749604, tags: targetUserId, access_token: accessToken }, function(result) {
+                modules.fb.api('me/friftapp:pokey', 'post', { message: body, access_token: accessToken, object: { type: 'object', title: 'Frift!' } }, function(result) {
                     if(!result || result.error) {
                         console.log(!result ? 'error occurred' : result.error);
                         callback();
