@@ -12,37 +12,111 @@ Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Da
 Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.076 seconds
+- Completed reload, in  0.055 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
 Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.dll (this message is harmless)
-OnJoinedLobby
+Auth Token CAAEy2aka0GoBALrowuUAdgZBWSiZCKIRtcXvDqvlQYujXomU2P2z5MJEPMsgfJA3R3EjFd3FhvyyHnSfSk6lVnu7Ozby3A2L1CEXHo8UZAjnyCF1wz0ZBx9ZASZBhkgekCPILCqBstEGg6azm1GlieQLefzEmHW2o18CgP1xeh2GQw8SfOMq3XvZAt1lGZCj0uZBm8xOTHFE6ZAdKmu8d1ntlh/
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Authentication:Start() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Integration\Authentication.cs:15)
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: C Line: 0)
 
-OnPhotonRandomJoinFailed
+[Singleton] An instance of Toolbox is needed in the scene, so '(singleton) Toolbox (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Singleton`1:get_Instance() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Integration\Singleton.cs:49)
+Authentication:Start() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Integration\Authentication.cs:17)
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: C Line: 0)
+
+OnJoinedLobby
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:OnJoinedLobby() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:23)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
+NetworkingPeer:OnOperationResponse(OperationResponse) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1266)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
+ 
+(Filename: C Line: 0)
 
 OnJoinedRoom
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:OnJoinedRoom() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:33)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
+NetworkingPeer:OnEvent(EventData) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1739)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: C Line: 0)
 
 OVRPlayerController(Clone) (UnityEngine.GameObject)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OVRPlayerController:Awake() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:129)
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:84)
+NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2322)
+PhotonNetwork:Instantiate(String, Vector3, Quaternion, Int32, Object[]) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2069)
+PhotonNetwork:Instantiate(String, Vector3, Quaternion, Int32) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2013)
+NetworkManager:SpawnMyPlayer() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:39)
+NetworkManager:OnJoinedRoom() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:35)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
+NetworkingPeer:OnEvent(EventData) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1739)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: C Line: 0)
 
 OVRPlayerController(Clone) (UnityEngine.GameObject)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OVRPlayerController:Awake() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:129)
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:84)
+NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2322)
+NetworkingPeer:OnEvent(EventData) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1794)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: C Line: 0)
+
+<RI.Hid> Device is not supported:  (65468, 0x0088).
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/PlatformDependent/Win/RawInput.cpp Line: 111)
 
 OVRPlayerController(Clone) (UnityEngine.GameObject)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OVRPlayerController:Awake() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:129)
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:84)
+NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2322)
+NetworkingPeer:OnEvent(EventData) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1794)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+(Filename: C Line: 0)
 
-OVRPlayerController(Clone) (UnityEngine.GameObject)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
+Waiting for finish

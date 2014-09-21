@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{EE4B38F9-0061-4BE3-08F3-1E8DDA46394A}</ProjectGuid>
+	<ProjectGuid>{C3DA89E1-70C6-7D6C-993E-C8F831D35880}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,6 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Integration\Authentication.cs" />
+     <Compile Include="Assets\Integration\Singleton.cs" />
+     <Compile Include="Assets\Integration\Toolbox.cs" />
      <Compile Include="Assets\NetworkCharacter.cs" />
      <Compile Include="Assets\NetworkManager.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCamera.cs" />
@@ -110,12 +113,13 @@
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Paul/Desktop/Projects/GitHub/xyz/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Paul/Desktop/Projects/GitHub/FaceRift/unity/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
