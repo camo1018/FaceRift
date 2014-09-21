@@ -23,7 +23,11 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																								GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																				GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Teamspeak Integration
 =======
 								GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> added the hook to facebook with unique ID and name

@@ -5,7 +5,7 @@ using System;
 public class Authentication : MonoBehaviour {
 
 	// Use this for initialization
-	IEnumerator Start () {
+	IEnumerator Start () {	
 		string[] arguments = Environment.GetCommandLineArgs();
 		
 		var argument = arguments[1];
