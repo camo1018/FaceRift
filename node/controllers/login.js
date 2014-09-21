@@ -1,6 +1,5 @@
 module.exports = function(app, modules) {
-    var section = '/login/'
-
+    var section = '/login/';
 	
     // Controller
     app.get(section + 'login', function(req, res) {
@@ -19,4 +18,9 @@ module.exports = function(app, modules) {
         req.session.accessToken = token;
         res.send('ready');
 	});
+
+    app.get('/actions' + section + 'getAccessToken', function(req, res) {
+        var accessToken = req.session.accessToken;
+        res.send(accessToken);
+    });
 }
