@@ -178,7 +178,7 @@ public class OVRPlayerController : Photon.MonoBehaviour
         {
             // We own this player: send the others our data
             stream.SendNext(Controller.transform.localPosition);
-            stream.SendNext(Controller.transform.rotation);
+            stream.SendNext(DirXform.rotation);
         }
         else
         {
@@ -190,6 +190,7 @@ public class OVRPlayerController : Photon.MonoBehaviour
 		
 	protected virtual void Update()
 	{
+		Debug.Log(DirXform.rotation);
 		if(photonView.isMine) {
 			UpdateMovement();
 			
