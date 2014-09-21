@@ -41,7 +41,8 @@ public class NetworkCharacter : Photon.MonoBehaviour {
 			// millisecond ago, and update our version of that player.
 			realPosition = (Vector3)stream.ReceiveNext();
 			realRotation = (Quaternion)stream.ReceiveNext();
-			
+			realId = (string)stream.ReceiveNext();
+			realName = (string)stream.ReceiveNext();
 		}
 		
 	}
