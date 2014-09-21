@@ -6,4 +6,7 @@ public class Toolbox : Singleton<Toolbox> {
 	protected Toolbox() {}
 	
 	public string authenticationToken = "";
+	public string id = "";
+	public string name = "";
+
 }

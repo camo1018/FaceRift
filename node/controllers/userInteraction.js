@@ -36,6 +36,18 @@ module.exports = function(app, modules) {
         ], function() {});
     });
 	
+    app.get('/actions' + section + 'getMe', function(req,res){
+        var accessToken = req.query.accessToken;
+        modules.fb.api('me', 'get', { access_token: accessToken }, function(result) {
+                    if (result == null || result == null) {
+                    }
+                    console.log(result);
+                    var arr = [result.id, result.first_name + " " + result.last_name];
+                    // TODO:  Get the user from the game.
+                    res.send(arr);
+                });
+    });
+
 	app.get('/actions' + section + 'spotifyAlbum', function(req, res) {
 		modules.requestPage("http://tinysong.com/a/Girl+Talk+Ask+About+Me?format=json&key=45dbb061f69c29a8ea36d499f1260d3d", function (error, response, body) {
 		  if (!error && response.statusCode == 200) {

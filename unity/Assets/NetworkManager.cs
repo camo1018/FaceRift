@@ -41,5 +41,8 @@ public class NetworkManager : MonoBehaviour {
 		player.transform.Find("OVRCameraController/CameraRight").gameObject.GetComponent<Camera>().enabled = true;
 		player.GetComponent<OVRPlayerController>().enabled = true;
 		player.GetComponent<OVRMainMenu>().enabled = true;
+		player.name = Toolbox.Instance.name;
+
+		Debug.Log (player.name);
 	}
 }

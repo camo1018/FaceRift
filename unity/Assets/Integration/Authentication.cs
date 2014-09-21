@@ -5,7 +5,7 @@ using System;
 public class Authentication : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	IEnumerator Start () {
 		string[] arguments = Environment.GetCommandLineArgs();
 		
 		var argument = arguments[1];
@@ -14,6 +14,21 @@ public class Authentication : MonoBehaviour {
 		
 		Debug.Log("Auth Token " + authenticationToken);
 		
-		Toolbox.Instance.authenticationToken = authenticationToken;		
-	}
+		Toolbox.Instance.authenticationToken = authenticationToken;	
+
+		string url = "localhost:7000/actions/userInteraction/getMe?accessToken="+authenticationToken;
+
+		WWW www = new WWW(url);
+		yield return www;
+
+		if (www.error == null)
+		{
+			string[] vals = (www.text.Substring(1, www.text.Length - 2)).Split(',');
+			Toolbox.Instance.id = vals[0];
+			Toolbox.Instance.name = vals[1];
+		} else {
+			Debug.LogError("Could not find user from auth token");
+		}  
+	}	  
+
 }
