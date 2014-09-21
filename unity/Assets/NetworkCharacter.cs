@@ -19,6 +19,7 @@ public class NetworkCharacter : Photon.MonoBehaviour {
 		else {
 			transform.position = Vector3.Lerp(transform.position, realPosition, 0.1f);
 			transform.Find("ForwardDirection").rotation = Quaternion.Lerp(transform.Find("ForwardDirection").rotation, realRotation, 0.1f);
+			transform.Find("OVRCameraController").rotation = Quaternion.Lerp(transform.Find("OVRCameraController").rotation, realRotation, 0.1f);
 		}
 	}
 	

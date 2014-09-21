@@ -2,16 +2,9 @@ Initialize engine version: 4.5.4f1 (e036f44c54c9)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Renderer: NVIDIA GeForce GTX 670M (ID=0x1213)
-    Vendor:   NVIDIA
-    VRAM:     2995 MB
-=======
     Renderer: Intel(R) HD Graphics 5000 (ID=0xa26)
     Vendor:   Intel
     VRAM:     0 MB
->>>>>>> Networked rotation and translation (lerping is also in)
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -19,114 +12,27 @@ Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Da
 Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.136 seconds
+- Completed reload, in  0.065 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-<<<<<<< HEAD
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
-=======
-    Renderer: NVIDIA Quadro K1000M  (ID=0xffc)
-    Vendor:   NVIDIA
-    VRAM:     1976 MB
-Begin MonoManager ReloadAssembly
-Platform assembly: C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.048 seconds
-<RI> Initializing input.
-<RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
-Platform assembly: C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\School\Other\HackGT\FaceRift\unity\frift_Data\Managed\System.dll (this message is harmless)
-Auth Token CAAEy2aka0GoBABUcdi9KJZA3zmA4xtQF8DcXO3CYunE9TNsuPfBnDBlrwEiwkf24ZCb3A28KZCodb2PMJdZBFHPsLqugZBMbwgX1yKVtLzHAec1H0J4xK7vFOUhgzII97M9MyBMIXxkAC3MDdEHeiAwhTBMEfHyvlb4fDIYSbW97ZAZAoZCsjl7D3cf4js6SBmR0vOYvywOpUBjY1JoiB8y1/
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-<Start>c__Iterator0:MoveNext() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Integration\Authentication.cs:15)
- 
-(Filename: C Line: 0)
-
-[Singleton] An instance of Toolbox is needed in the scene, so '(singleton) Toolbox (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Singleton`1:get_Instance() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Integration\Singleton.cs:49)
-<Start>c__Iterator0:MoveNext() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Integration\Authentication.cs:17)
-=======
 desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
 Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.dll (this message is harmless)
+OVRPlayerController (UnityEngine.GameObject)
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+OVRPlayerController:Awake() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:125)
+ 
+(Filename: C Line: 0)
+
 IndexOutOfRangeException: Array index is out of range.
-  at Authentication.Start () [0x00006] in C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Integration\Authentication.cs:11 
->>>>>>> Networked rotation and translation (lerping is also in)
+  at Authentication+<Start>c__Iterator0.MoveNext () [0x0002c] in C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Integration\Authentication.cs:11 
  
 (Filename: C Line: 0)
 
 OnJoinedLobby
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-<<<<<<< HEAD
-NetworkManager:OnJoinedLobby() (at C:\School\Other\HackGT\FaceRift\unity\Assets\NetworkManager.cs:23)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
-NetworkingPeer:OnOperationResponse(OperationResponse) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1266)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-PhotonHandler:Update() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
- 
-(Filename: C Line: 0)
-
-OnJoinedRoom
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-NetworkManager:OnJoinedRoom() (at C:\School\Other\HackGT\FaceRift\unity\Assets\NetworkManager.cs:33)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
-NetworkingPeer:OnEvent(EventData) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1739)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-PhotonHandler:Update() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
- 
-(Filename: C Line: 0)
-
-OVRPlayerController(Clone) (UnityEngine.GameObject)
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-OVRPlayerController:Awake() (at C:\School\Other\HackGT\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:129)
-UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
-UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
-UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:84)
-NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2322)
-PhotonNetwork:Instantiate(String, Vector3, Quaternion, Int32, Object[]) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2069)
-PhotonNetwork:Instantiate(String, Vector3, Quaternion, Int32) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs:2013)
-NetworkManager:SpawnMyPlayer() (at C:\School\Other\HackGT\FaceRift\unity\Assets\NetworkManager.cs:39)
-NetworkManager:OnJoinedRoom() (at C:\School\Other\HackGT\FaceRift\unity\Assets\NetworkManager.cs:35)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
-NetworkingPeer:OnEvent(EventData) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1739)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-PhotonHandler:Update() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
- 
-(Filename: C Line: 0)
-
-"Vivek Srinivasan"
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-NetworkManager:SpawnMyPlayer() (at C:\School\Other\HackGT\FaceRift\unity\Assets\NetworkManager.cs:46)
-NetworkManager:OnJoinedRoom() (at C:\School\Other\HackGT\FaceRift\unity\Assets\NetworkManager.cs:35)
-UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
-NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
-NetworkingPeer:OnEvent(EventData) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1739)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-PhotonHandler:Update() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
-=======
 NetworkManager:OnJoinedLobby() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:23)
 UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
 NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
@@ -163,25 +69,12 @@ ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
 ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
 ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
 PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
->>>>>>> Networked rotation and translation (lerping is also in)
  
 (Filename: C Line: 0)
 
 OVRPlayerController(Clone) (UnityEngine.GameObject)
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-<<<<<<< HEAD
-OVRPlayerController:Awake() (at C:\School\Other\HackGT\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:129)
-UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
-UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
-UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:84)
-NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2322)
-NetworkingPeer:OnEvent(EventData) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1794)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-PhotonHandler:Update() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
-=======
 OVRPlayerController:Awake() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:125)
 UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
 UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
@@ -198,25 +91,43 @@ ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
 ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
 ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
 PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
->>>>>>> Networked rotation and translation (lerping is also in)
+ 
+(Filename: C Line: 0)
+
+[Singleton] An instance of Toolbox is needed in the scene, so '(singleton) Toolbox (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Singleton`1:get_Instance() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Integration\Singleton.cs:49)
+NetworkManager:SpawnMyPlayer() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:44)
+NetworkManager:OnJoinedRoom() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:35)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
+NetworkingPeer:OnEvent(EventData) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1739)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
+ 
+(Filename: C Line: 0)
+
+
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:SpawnMyPlayer() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:46)
+NetworkManager:OnJoinedRoom() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\NetworkManager.cs:35)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[]) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1896)
+NetworkingPeer:OnEvent(EventData) (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1739)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
  
 (Filename: C Line: 0)
 
 OVRPlayerController(Clone) (UnityEngine.GameObject)
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
-<<<<<<< HEAD
-OVRPlayerController:Awake() (at C:\School\Other\HackGT\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:129)
-UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
-UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
-UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:84)
-NetworkingPeer:DoInstantiate(Hashtable, PhotonPlayer, GameObject) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:2322)
-NetworkingPeer:OnEvent(EventData) (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs:1794)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-PhotonHandler:Update() (at C:\School\Other\HackGT\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
-=======
 OVRPlayerController:Awake() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\OVR\Scripts\OVRPlayerController.cs:125)
 UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
 UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\UnityEngineObject.cs:74)
@@ -227,12 +138,7 @@ ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
 ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
 ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
 PhotonHandler:Update() (at C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonHandler.cs:83)
->>>>>>> Networked rotation and translation (lerping is also in)
  
 (Filename: C Line: 0)
 
 Waiting for finish
-<<<<<<< HEAD
->>>>>>> added the hook to facebook with unique ID and name
-=======
->>>>>>> Networked rotation and translation (lerping is also in)
