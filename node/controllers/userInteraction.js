@@ -11,12 +11,13 @@ module.exports = function(app, modules) {
         modules.async.series([
             function(callback) {
                 modules.fb.api('me/taggable_friends', 'get', { access_token: accessToken }, function(result) {
-                    if (result.length == 0) {
+                    if (result == null || result.data == null) {
                         console.log('You have no friends');
                         return;
                     }
                     // TODO:  Get the user from the game.
                     targetUserId = result.data[0].id;
+                    console.log('friend:' + targetUserId);
                     callback();
                 });
             },

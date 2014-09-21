@@ -13,6 +13,7 @@ module.exports = function(app, modules) {
 
     // Api Controller
 	app.get('/actions' + section + 'login', function(req, res) {
+        console.log('hit');
 		var response = req.query.response;
         var token = response.authResponse.accessToken;
         req.session.accessToken = token;
