@@ -43,6 +43,7 @@ public class NetworkManager : MonoBehaviour {
 		player.GetComponent<OVRMainMenu>().enabled = true;
 		player.GetComponent<PlayerInfo>().name = Toolbox.Instance.name;
 		player.GetComponent<PlayerInfo>().id = Toolbox.Instance.id;
+		player.GetComponent<Teamspeak>().enabled = true;
 		
 		Debug.Log ("ID: " + player.GetComponent<PlayerInfo> ().id);
 		Debug.Log ("Name: " + player.GetComponent<PlayerInfo> ().name);
