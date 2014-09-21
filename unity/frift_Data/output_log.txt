@@ -2,26 +2,39 @@ Initialize engine version: 4.5.4f1 (e036f44c54c9)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 670M (ID=0x1213)
-    Vendor:   NVIDIA
-    VRAM:     2995 MB
+    Renderer: Intel(R) HD Graphics 5000 (ID=0xa26)
+    Vendor:   Intel
+    VRAM:     0 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.053 seconds
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.153 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1080 75Hz; virtual: 3840x1080 at -1920,0
-Platform assembly: C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\James\Documents\FaceRift\unity\frift_Data\Managed\System.dll (this message is harmless)
-OVRPlayerController (UnityEngine.GameObject)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
+desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
+Initialize engine version: 4.5.4f1 (e036f44c54c9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 5000 (ID=0xa26)
+    Vendor:   Intel
+    VRAM:     0 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.dll (this message is harmless)
 IndexOutOfRangeException: Array index is out of range.
   at Authentication+<Start>c__Iterator0.MoveNext () [0x00000] in <filename unknown>:0 
  
@@ -43,6 +56,7 @@ OVRPlayerController(Clone) (UnityEngine.GameObject)
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
 [Singleton] An instance of Toolbox is needed in the scene, so '(singleton) Toolbox (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -55,7 +69,85 @@ Name:
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Paul\Desktop\Projects\GitHub\FaceRift\unity\frift_Data\Managed\System.dll (this message is harmless)
+Auth Token CAAEy2aka0GoBAMv6NyLFJUUZCdrd9nlAejD2e9NfzfDJ3g6ZAvdj3EtGhDef63x9bAvQKTYSblOKN9ZA74FfHMAfZADvsvAOBqe9Pr7PkC8ZCavDAMVFFpq6J34kzueI2H8uP6uZBId8i7ezuaeApHsRXDEwDZA7vuE9TH6tgWYhLZBaKvQgeOsQZBQ3ZA59MSRgI9GolY5iNHxNryAtl1CSsBWBff4ywHxH0ZD/
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+[Singleton] An instance of Toolbox is needed in the scene, so '(singleton) Toolbox (UnityEngine.GameObject)' was created with DontDestroyOnLoad.
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+OnJoinedLobby
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+OnPhotonRandomJoinFailed
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+OnJoinedRoom
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 OVRPlayerController(Clone) (UnityEngine.GameObject)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+ID: 1463679730572545
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Name: Bill Huiman
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+entered print screen
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+entered print screen
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+localhost:7000/actions/userInteraction/postPhoto?accessToken=CAAEy2aka0GoBAMv6NyLFJUUZCdrd9nlAejD2e9NfzfDJ3g6ZAvdj3EtGhDef63x9bAvQKTYSblOKN9ZA74FfHMAfZADvsvAOBqe9Pr7PkC8ZCavDAMVFFpq6J34kzueI2H8uP6uZBId8i7ezuaeApHsRXDEwDZA7vuE9TH6tgWYhLZBaKvQgeOsQZBQ3ZA59MSRgI9GolY5iNHxNryAtl1CSsBWBff4ywHxH0ZD/
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+localhost:7000/actions/userInteraction/postPhoto?accessToken=CAAEy2aka0GoBAMv6NyLFJUUZCdrd9nlAejD2e9NfzfDJ3g6ZAvdj3EtGhDef63x9bAvQKTYSblOKN9ZA74FfHMAfZADvsvAOBqe9Pr7PkC8ZCavDAMVFFpq6J34kzueI2H8uP6uZBId8i7ezuaeApHsRXDEwDZA7vuE9TH6tgWYhLZBaKvQgeOsQZBQ3ZA59MSRgI9GolY5iNHxNryAtl1CSsBWBff4ywHxH0ZD/
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+entered print screen
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+entered print screen
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+localhost:7000/actions/userInteraction/postPhoto?accessToken=CAAEy2aka0GoBAMv6NyLFJUUZCdrd9nlAejD2e9NfzfDJ3g6ZAvdj3EtGhDef63x9bAvQKTYSblOKN9ZA74FfHMAfZADvsvAOBqe9Pr7PkC8ZCavDAMVFFpq6J34kzueI2H8uP6uZBId8i7ezuaeApHsRXDEwDZA7vuE9TH6tgWYhLZBaKvQgeOsQZBQ3ZA59MSRgI9GolY5iNHxNryAtl1CSsBWBff4ywHxH0ZD/
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+localhost:7000/actions/userInteraction/postPhoto?accessToken=CAAEy2aka0GoBAMv6NyLFJUUZCdrd9nlAejD2e9NfzfDJ3g6ZAvdj3EtGhDef63x9bAvQKTYSblOKN9ZA74FfHMAfZADvsvAOBqe9Pr7PkC8ZCavDAMVFFpq6J34kzueI2H8uP6uZBId8i7ezuaeApHsRXDEwDZA7vuE9TH6tgWYhLZBaKvQgeOsQZBQ3ZA59MSRgI9GolY5iNHxNryAtl1CSsBWBff4ywHxH0ZD/
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Pic didn't work
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Pic didn't work
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Pic didn't work
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Pic didn't work
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 

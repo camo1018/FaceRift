@@ -11,7 +11,7 @@ public class Poke : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (OVRGamepadController.GPC_GetButton (0) || Input.GetKey(KeyCode.F)) {
+		if (OVRGamepadController.GPC_GetButton (0) || Input.GetKey(KeyCode.E)) {
 			RaycastHit hit;
 			Ray rayFired = new Ray(transform.FindChild("OVRCameraController").FindChild("CameraLeft").position + 
 			                       														(transform.FindChild("OVRCameraController").FindChild("CameraLeft").forward*3.0f),
@@ -20,7 +20,6 @@ public class Poke : MonoBehaviour {
 			if (Physics.Raycast(rayFired, out hit, pokeDistance)) {
 				if (hit.collider.tag == "user") {
 					string id = hit.collider.GetComponentInParent<OVRPlayerController>().GetComponent<PlayerInfo>().id;
-					Debug.Log ("ISISISIS " + id);
 					StartCoroutine(Poker(id));
 
 				}

@@ -28,6 +28,7 @@ limitations under the License.
 
 using UnityEngine;
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(CharacterController))]
@@ -168,11 +169,11 @@ public class OVRPlayerController : Photon.MonoBehaviour
 		
 	protected virtual void Update()
 	{
-		if (Input.GetKey (KeyCode.P)) {
+		if (OVRGamepadController.GPC_GetButtonDown (1) || Input.GetKeyDown (KeyCode.P)) {
 			Debug.Log ("entered print screen");
+			File.Delete("screen.png");
 			Application.CaptureScreenshot ("screen.png");
-			for(int i = 0; i < 1000; i++);
-			StartCoroutine(Pics());
+			StartCoroutine("Pics");
 		}
 
 		UpdateMovement();
@@ -223,6 +224,8 @@ public class OVRPlayerController : Photon.MonoBehaviour
 
 	IEnumerator Pics()
 	{
+		yield return new WaitForSeconds(2);
+		
 		string url = "localhost:7000/actions/userInteraction/postPhoto?accessToken="+Toolbox.Instance.authenticationToken;
 		
 		Debug.Log (url);
@@ -321,33 +324,7 @@ public class OVRPlayerController : Photon.MonoBehaviour
 		}
 			
 		// Rotate
-			
-		// D-Pad rachet
-
-		bool curHatLeft = false;
-		if(OVRGamepadController.GPC_GetButton((int)OVRGamepadController.Button.Left) == true)
-			curHatLeft = true;
-
-		if(curHatLeft && !prevHatLeft)
-			YRotation -= RotationRatchet; 
-
-		prevHatLeft = curHatLeft;
-
-		bool curHatRight = false;
-		if(OVRGamepadController.GPC_GetButton((int)OVRGamepadController.Button.Right) == true)
-			curHatRight = true;
-
-		if(curHatRight && !prevHatRight)
-			YRotation += RotationRatchet; 
-		
-		prevHatRight = curHatRight;
-
-		//Use keys to ratchet rotation
-		if (Input.GetKeyDown(KeyCode.Q)) 
-			YRotation -= RotationRatchet; 
-		if (Input.GetKeyDown(KeyCode.E)) 
-			YRotation += RotationRatchet;
-		
+				
 		// * * * * * * * * * * *
 		// Mouse input
 			
