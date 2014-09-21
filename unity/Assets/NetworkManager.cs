@@ -36,12 +36,10 @@ public class NetworkManager : MonoBehaviour {
 	}
 	
 	void SpawnMyPlayer() {
-		
 		GameObject player = (GameObject)PhotonNetwork.Instantiate(playerPrefab.name, Vector3.up * 5, Quaternion.identity, 0);
-		Debug.Log ("spawned");
-		//((MonoBehaviour)myPlayerGO.GetComponent("FPSInputController")).enabled = true;
-		//((MonoBehaviour)myPlayerGO.GetComponent("MouseLook")).enabled = true;
-		//((MonoBehaviour)myPlayerGO.GetComponent("CharacterMotor")).enabled = true;
-		//myPlayerGO.transform.FindChild("OVRCameraController").gameObject.SetActive(true);
+		player.transform.Find("OVRCameraController/CameraLeft").gameObject.GetComponent<Camera>().enabled = true;
+		player.transform.Find("OVRCameraController/CameraRight").gameObject.GetComponent<Camera>().enabled = true;
+		player.GetComponent<OVRPlayerController>().enabled = true;
+		player.GetComponent<OVRMainMenu>().enabled = true;
 	}
 }

@@ -82,7 +82,7 @@ public class OVRPlayerController : Photon.MonoBehaviour
 	/// The strength of gravity, relative to Physics.gravity
 	/// </summary>
 	public float GravityModifier   = 0.379f;
-	#endregion
+	#endregion;
 
 	#region Static Members
 	static float sDeltaRotationOld = 0.0f;
