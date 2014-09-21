@@ -10,6 +10,7 @@ public class HeadText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		name = transform.parent.parent.GetComponent<PlayerInfo>().name;
 		GetComponent<TextMesh> ().text = name;
 	}
 }
