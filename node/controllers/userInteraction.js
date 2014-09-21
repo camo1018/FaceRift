@@ -6,16 +6,14 @@ module.exports = function(app, modules) {
 
     // Controller
     app.get('/actions' + section + 'poke', function(req, res) {
-        var accessToken = req.session.accessToken;
-        var targetUserId = req.session.friendID;
+        var accessToken = req.query.accessToken;
+        var targetUserId = req.query.friendID;
 		var body = 'I poked you, @[' + targetUserId + ']!';
 		modules.fb.api('me/friftapp:pokey', 'post', { message: body, access_token: accessToken, object: { type: 'object', title: 'Frift!' } }, function(result) {
 			if(!result || result.error) {
 				console.log(!result ? 'error occurred' : result.error);
-				callback();
 			}
 			res.send('success');
-			callback();
 		});
     });
 	
@@ -33,7 +31,7 @@ module.exports = function(app, modules) {
 	
 	app.get('/actions' + section + 'postPhoto', function(req,res){
 		var accessToken = req.query.accessToken;
-		var body = 'Partying in #frift!"
+		var body = "Partying in #frift!"
 		modules.fb.api('me/photos', 'post',
 		{
 			url:			req.query.photo,
