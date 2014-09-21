@@ -1,6 +1,7 @@
 /**
  * Created by Paul on 9/20/2014.
  */
+var fs = require('fs');
 module.exports = function(app, modules) {
     var section = '/userInteraction/';
 
@@ -32,9 +33,11 @@ module.exports = function(app, modules) {
 	app.get('/actions' + section + 'postPhoto', function(req,res){
 		var accessToken = req.query.accessToken;
 		var body = "Partying in #frift!"
+        var createdSource = fs.createReadStream("unity/frift_Data/screen.png");
 		modules.fb.api('me/photos', 'post',
 		{
-			url:			req.query.photo,
+			source:			createdSource,
+            fileUpload:     "true", 
 			access_token: 	accessToken,
 			message:		body
 		},

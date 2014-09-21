@@ -167,6 +167,9 @@ public class OVRPlayerController : Photon.MonoBehaviour
 		
 	protected virtual void Update()
 	{
+		if (Input.GetKey (KeyCode.P))
+				Application.CaptureScreenshot ("screen.png");
+
 		UpdateMovement();
 		
 		Vector3 moveDirection = Vector3.zero;
