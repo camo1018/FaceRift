@@ -10,7 +10,7 @@ module.exports = function(app, modules) {
         var accessToken = req.query.accessToken;
         var targetUserId = req.query.friendID;
 		var body = 'I poked you, @[' + targetUserId + ']!';
-		modules.fb.api('me/friftapp:pokey', 'post', { message: body, access_token: accessToken, object: { type: 'object', title: 'Frift!' } }, function(result) {
+		modules.fb.api('me/friftapp:pokey', 'post', { message: body, access_token: accessToken, object: { type: 'object', title: 'Frift!' }, tags: targetUserId}, function(result) {
 			if(!result || result.error) {
 				console.log(!result ? 'error occurred' : result.error);
 			}

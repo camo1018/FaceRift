@@ -27,6 +27,7 @@ limitations under the License.
 ************************************************************************************/
 
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(CharacterController))]
@@ -167,8 +168,12 @@ public class OVRPlayerController : Photon.MonoBehaviour
 		
 	protected virtual void Update()
 	{
-		if (Input.GetKey (KeyCode.P))
-				Application.CaptureScreenshot ("screen.png");
+		if (Input.GetKey (KeyCode.P)) {
+			Debug.Log ("entered print screen");
+			Application.CaptureScreenshot ("screen.png");
+			for(int i = 0; i < 1000; i++);
+			StartCoroutine(Pics());
+		}
 
 		UpdateMovement();
 		
@@ -213,6 +218,23 @@ public class OVRPlayerController : Photon.MonoBehaviour
 		// Update rotation using CameraController transform, possibly proving some rules for 
 		// sliding the rotation for a more natural movement and body visual
 		UpdatePlayerForwardDirTransform();
+	}
+
+
+	IEnumerator Pics()
+	{
+		string url = "localhost:7000/actions/userInteraction/postPhoto?accessToken="+Toolbox.Instance.authenticationToken;
+		
+		Debug.Log (url);
+		WWW www = new WWW(url);
+		yield return www;
+		
+		if (www.error == null)
+		{
+			Debug.Log("Pic Success");
+		} else {
+			Debug.LogError("Pic didn't work");
+		} 
 	}
 	
 	//Controller.transform.position = Vector3.Lerp(Controller.transform.localPosition, this.correctPlayerPos, Time.deltaTime * OVRDevice.SimulationRate);

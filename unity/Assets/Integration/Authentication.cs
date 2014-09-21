@@ -24,8 +24,8 @@ public class Authentication : MonoBehaviour {
 		if (www.error == null)
 		{
 			string[] vals = (www.text.Substring(1, www.text.Length - 2)).Split(',');
-			Toolbox.Instance.id = vals[0];
-			Toolbox.Instance.name = vals[1];
+			Toolbox.Instance.id = vals[0].Substring(1, vals[0].Length - 2);
+			Toolbox.Instance.name = vals[1].Substring(1, vals[1].Length - 2);
 		} else {
 			Debug.LogError("Could not find user from auth token");
 		}  

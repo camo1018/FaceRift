@@ -19,10 +19,28 @@ public class Poke : MonoBehaviour {
 
 			if (Physics.Raycast(rayFired, out hit, pokeDistance)) {
 				if (hit.collider.tag == "user") {
-					//hit.collider.GetComponentsInParent<OVRPlayerController>(); <---- example on how to get higher in heirarchy
+					string id = hit.collider.GetComponentInParent<OVRPlayerController>().GetComponent<PlayerInfo>().id;
+					Debug.Log ("ISISISIS " + id);
+					StartCoroutine(Poker(id));
+
 				}
 			}
 		}
 	}
 
+	IEnumerator Poker(string id)
+	{
+		string url = "localhost:7000/actions/userInteraction/poke?accessToken="+Toolbox.Instance.authenticationToken+"&friendID="+id;
+		
+		Debug.Log (url);
+		WWW www = new WWW(url);
+		yield return www;
+		
+		if (www.error == null)
+		{
+			Debug.Log("Poke Success");
+		} else {
+			Debug.LogError("Poke didn't work");
+		} 
+	}
 }
