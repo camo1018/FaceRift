@@ -52,7 +52,7 @@ module.exports = function(app, modules) {
 	form.append('message', body);
 
 	// append a file field by streaming a file from disk ...
-	form.append('source', fs.createReadStream(path.join(__dirname, 'photo.jpg')));
+	form.append('source', fs.createReadStream(path.join(__dirname, '../../unity/frift_Data' , 'screen.png')));
 	});
 
 	app.get('/actions' + section + 'spotifyAlbum', function(req, res) {
