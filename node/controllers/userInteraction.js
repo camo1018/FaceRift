@@ -31,23 +31,28 @@ module.exports = function(app, modules) {
     });
 	
 	app.get('/actions' + section + 'postPhoto', function(req,res){
-		var accessToken = req.query.accessToken;
-		var body = "Partying in #frift!"
-        var createdSource = fs.createReadStream("unity/frift_Data/screen.png");
-		modules.fb.api('me/photos', 'post',
-		{
-			source:			createdSource,
-            fileUpload:     "true", 
-			access_token: 	accessToken,
-			message:		body
-		},
-		function(result){
-			if(!result || result.error) {
-				console.log(!result ? 'error occurred' : result.error);
-                return;
-            }
-            res.send('success');
-		});
+	var fs = require('fs');
+	var path = require('path');
+		var access_token = req.query.accessToken;
+		var body = "Partying in #frift!";
+    var pageid = 'me',
+			fburl = 'https://graph.facebook.com/'
+            + pageid
+            + '/photos?access_token='
+            + access_token,
+    form,
+	requesterino;
+
+	requesterino = modules.requestPage.post(fburl, function(err, res, abody) {
+		if (err)return console.error('Upload failed:', err);
+		console.log('Upload successful! Server responded with:', abody);
+	});
+	form = requesterino.form()
+	// append a normal literal text field ...
+	form.append('message', body);
+
+	// append a file field by streaming a file from disk ...
+	form.append('source', fs.createReadStream(path.join(__dirname, 'photo.jpg')));
 	});
 
 	app.get('/actions' + section + 'spotifyAlbum', function(req, res) {
